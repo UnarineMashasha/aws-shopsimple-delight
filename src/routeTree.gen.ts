@@ -12,6 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CartRouteImport } from './routes/cart'
 import { Route as CatalogueRouteImport } from './routes/catalogue'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as OrdersRouteImport } from './routes/orders'
+import { Route as OrderConfirmedOrderIdRouteImport } from './routes/order-confirmed.$orderId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +32,93 @@ const CatalogueRoute = CatalogueRouteImport.update({
   path: '/catalogue',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrdersRoute = OrdersRouteImport.update({
+  id: '/orders',
+  path: '/orders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrderConfirmedOrderIdRoute = OrderConfirmedOrderIdRouteImport.update({
+  id: '/order-confirmed/$orderId',
+  path: '/order-confirmed/$orderId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cart': typeof CartRoute
   '/catalogue': typeof CatalogueRoute
+  '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/orders': typeof OrdersRoute
+  '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cart': typeof CartRoute
   '/catalogue': typeof CatalogueRoute
+  '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/orders': typeof OrdersRoute
+  '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cart': typeof CartRoute
   '/catalogue': typeof CatalogueRoute
+  '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/orders': typeof OrdersRoute
+  '/order-confirmed/$orderId': typeof OrderConfirmedOrderIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cart' | '/catalogue'
+  fullPaths:
+    | '/'
+    | '/cart'
+    | '/catalogue'
+    | '/checkout'
+    | '/contact'
+    | '/orders'
+    | '/order-confirmed/$orderId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cart' | '/catalogue'
-  id: '__root__' | '/' | '/cart' | '/catalogue'
+  to:
+    | '/'
+    | '/cart'
+    | '/catalogue'
+    | '/checkout'
+    | '/contact'
+    | '/orders'
+    | '/order-confirmed/$orderId'
+  id:
+    | '__root__'
+    | '/'
+    | '/cart'
+    | '/catalogue'
+    | '/checkout'
+    | '/contact'
+    | '/orders'
+    | '/order-confirmed/$orderId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CartRoute: typeof CartRoute
   CatalogueRoute: typeof CatalogueRoute
+  CheckoutRoute: typeof CheckoutRoute
+  ContactRoute: typeof ContactRoute
+  OrdersRoute: typeof OrdersRoute
+  OrderConfirmedOrderIdRoute: typeof OrderConfirmedOrderIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +144,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CatalogueRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orders': {
+      id: '/orders'
+      path: '/orders'
+      fullPath: '/orders'
+      preLoaderRoute: typeof OrdersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/order-confirmed/$orderId': {
+      id: '/order-confirmed/$orderId'
+      path: '/order-confirmed/$orderId'
+      fullPath: '/order-confirmed/$orderId'
+      preLoaderRoute: typeof OrderConfirmedOrderIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +179,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CartRoute: CartRoute,
   CatalogueRoute: CatalogueRoute,
+  CheckoutRoute: CheckoutRoute,
+  ContactRoute: ContactRoute,
+  OrdersRoute: OrdersRoute,
+  OrderConfirmedOrderIdRoute: OrderConfirmedOrderIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

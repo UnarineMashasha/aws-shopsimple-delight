@@ -22,7 +22,7 @@ export const products: Product[] = [
   {
     id: "canvas-tote",
     name: "Everyday Canvas Tote",
-    price: 68,
+    price: 649,
     category: "Totes",
     image: canvasTote,
     blurb: "Heavy cotton canvas with tanned leather handles.",
@@ -30,7 +30,7 @@ export const products: Product[] = [
   {
     id: "crossbody",
     name: "Tan Leather Crossbody",
-    price: 145,
+    price: 1299,
     category: "Shoulder",
     image: crossbody,
     blurb: "Smooth leather with a brass clasp and adjustable strap.",
@@ -38,7 +38,7 @@ export const products: Product[] = [
   {
     id: "waxed-backpack",
     name: "Waxed Canvas Backpack",
-    price: 165,
+    price: 1499,
     category: "Backpacks",
     image: backpack,
     blurb: "Olive waxed canvas, buckled flap and side pockets.",
@@ -46,7 +46,7 @@ export const products: Product[] = [
   {
     id: "shoulder-bag",
     name: "Noir Shoulder Bag",
-    price: 189,
+    price: 1699,
     category: "Shoulder",
     image: shoulderBag,
     blurb: "Structured black leather with a slim gold-fitted strap.",
@@ -54,7 +54,7 @@ export const products: Product[] = [
   {
     id: "straw-basket",
     name: "Straw Market Basket",
-    price: 54,
+    price: 499,
     category: "Totes",
     image: strawBasket,
     blurb: "Hand-woven straw with soft cotton webbing handles.",
@@ -62,7 +62,7 @@ export const products: Product[] = [
   {
     id: "leather-duffel",
     name: "Weekender Duffel",
-    price: 275,
+    price: 2499,
     category: "Travel",
     image: duffel,
     blurb: "Full-grain leather, brass hardware and a shoulder strap.",
@@ -70,7 +70,7 @@ export const products: Product[] = [
   {
     id: "belt-bag",
     name: "Quilted Belt Bag",
-    price: 42,
+    price: 399,
     category: "Travel",
     image: beltBag,
     blurb: "Lightweight quilted nylon in sage, worn hip or chest.",
@@ -78,7 +78,7 @@ export const products: Product[] = [
   {
     id: "laptop-bag",
     name: "Navy Laptop Satchel",
-    price: 198,
+    price: 1799,
     category: "Work",
     image: laptopBag,
     blurb: "Slim leather satchel with a padded 15-inch sleeve.",
@@ -92,5 +92,5 @@ export function findProduct(id: string) {
 }
 
 export function formatPrice(value: number) {
-  return `$${value.toFixed(2)}`;
+  return `R${value.toLocaleString("en-ZA")}`;
 }

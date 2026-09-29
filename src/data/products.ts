@@ -1,11 +1,11 @@
-import pourOverSet from "@/assets/pour-over-set.jpg";
-import storageBasket from "@/assets/storage-basket.jpg";
-import deskLamp from "@/assets/desk-lamp.jpg";
-import handSoap from "@/assets/hand-soap.jpg";
-import teaTowels from "@/assets/tea-towels.jpg";
-import deskTray from "@/assets/desk-tray.jpg";
-import planter from "@/assets/planter.jpg";
-import candle from "@/assets/candle.jpg";
+import canvasTote from "@/assets/bag-canvas-tote.jpg";
+import crossbody from "@/assets/bag-crossbody.jpg";
+import backpack from "@/assets/bag-backpack.jpg";
+import shoulderBag from "@/assets/bag-shoulder.jpg";
+import strawBasket from "@/assets/bag-straw.jpg";
+import duffel from "@/assets/bag-duffel.jpg";
+import beltBag from "@/assets/bag-belt.jpg";
+import laptopBag from "@/assets/bag-laptop.jpg";
 
 export type Product = {
   id: string;
@@ -16,72 +16,72 @@ export type Product = {
   blurb: string;
 };
 
-export const categories = ["All", "Kitchen", "Home", "Desk", "Bath"] as const;
+export const categories = ["All", "Totes", "Shoulder", "Backpacks", "Travel", "Work"] as const;
 
 export const products: Product[] = [
   {
-    id: "pour-over-set",
-    name: "Sage Pour-Over Set",
-    price: 34,
-    category: "Kitchen",
-    image: pourOverSet,
-    blurb: "Glazed ceramic dripper, carafe and mug.",
+    id: "canvas-tote",
+    name: "Everyday Canvas Tote",
+    price: 68,
+    category: "Totes",
+    image: canvasTote,
+    blurb: "Heavy cotton canvas with tanned leather handles.",
   },
   {
-    id: "storage-basket",
-    name: "Linen Storage Basket",
-    price: 22,
-    category: "Home",
-    image: storageBasket,
-    blurb: "Hand-woven natural fibre with soft handles.",
+    id: "crossbody",
+    name: "Tan Leather Crossbody",
+    price: 145,
+    category: "Shoulder",
+    image: crossbody,
+    blurb: "Smooth leather with a brass clasp and adjustable strap.",
   },
   {
-    id: "desk-lamp",
-    name: "Amber Desk Lamp",
-    price: 58,
-    category: "Desk",
-    image: deskLamp,
-    blurb: "Warm glass dome with a dimmable bulb.",
+    id: "waxed-backpack",
+    name: "Waxed Canvas Backpack",
+    price: 165,
+    category: "Backpacks",
+    image: backpack,
+    blurb: "Olive waxed canvas, buckled flap and side pockets.",
   },
   {
-    id: "hand-soap",
-    name: "Sage Hand Soap",
-    price: 12,
-    category: "Bath",
-    image: handSoap,
-    blurb: "Sage and citrus, with botanical extracts.",
+    id: "shoulder-bag",
+    name: "Noir Shoulder Bag",
+    price: 189,
+    category: "Shoulder",
+    image: shoulderBag,
+    blurb: "Structured black leather with a slim gold-fitted strap.",
   },
   {
-    id: "tea-towels",
-    name: "Striped Tea Towels",
-    price: 18,
-    category: "Kitchen",
-    image: teaTowels,
-    blurb: "Set of four stonewashed linen towels.",
+    id: "straw-basket",
+    name: "Straw Market Basket",
+    price: 54,
+    category: "Totes",
+    image: strawBasket,
+    blurb: "Hand-woven straw with soft cotton webbing handles.",
   },
   {
-    id: "desk-tray",
-    name: "Walnut Desk Tray",
-    price: 46,
-    category: "Desk",
-    image: deskTray,
-    blurb: "Solid walnut with four tidy compartments.",
+    id: "leather-duffel",
+    name: "Weekender Duffel",
+    price: 275,
+    category: "Travel",
+    image: duffel,
+    blurb: "Full-grain leather, brass hardware and a shoulder strap.",
   },
   {
-    id: "planter",
-    name: "Terracotta Planter",
-    price: 16,
-    category: "Home",
-    image: planter,
-    blurb: "Unglazed clay pot with a drainage dish.",
+    id: "belt-bag",
+    name: "Quilted Belt Bag",
+    price: 42,
+    category: "Travel",
+    image: beltBag,
+    blurb: "Lightweight quilted nylon in sage, worn hip or chest.",
   },
   {
-    id: "candle",
-    name: "Frosted Soy Candle",
-    price: 26,
-    category: "Home",
-    image: candle,
-    blurb: "Hand-poured soy wax, 45 hour burn.",
+    id: "laptop-bag",
+    name: "Navy Laptop Satchel",
+    price: 198,
+    category: "Work",
+    image: laptopBag,
+    blurb: "Slim leather satchel with a padded 15-inch sleeve.",
   },
 ];
 

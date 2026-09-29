@@ -6,16 +6,16 @@ import { ProductCard } from "@/components/ProductCard";
 export const Route = createFileRoute("/catalogue")({
   head: () => ({
     meta: [
-      { title: "Catalogue — ShopSimple" },
+      { title: "Catalogue — ShopSimple bags" },
       {
         name: "description",
         content:
-          "Browse every ShopSimple product: kitchen, home, desk and bath essentials. Search by name or filter by category.",
+          "Browse every ShopSimple bag: totes, shoulder bags, backpacks, travel bags and work satchels. Search by name or filter by style.",
       },
-      { property: "og:title", content: "Catalogue — ShopSimple" },
+      { property: "og:title", content: "Catalogue — ShopSimple bags" },
       {
         property: "og:description",
-        content: "Kitchen, home, desk and bath essentials, all in one small catalogue.",
+        content: "Totes, shoulder bags, backpacks, travel bags and work satchels.",
       },
     ],
   }),
@@ -39,7 +39,8 @@ function Catalogue() {
     <section className="py-10 sm:py-14">
       <h1 className="text-3xl font-semibold tracking-tight">Catalogue</h1>
       <p className="mt-2 max-w-[52ch] text-muted-foreground">
-        Eight everyday pieces, picked to last. Search for something specific or filter by room.
+        Eight bags, picked to carry well and last. Search for a style or filter by the way you
+        carry.
       </p>
 
       <div className="glass-panel mt-6 flex flex-col gap-4 rounded-2xl p-4 sm:flex-row sm:items-center sm:justify-between">
@@ -73,9 +74,9 @@ function Catalogue() {
 
       {visible.length === 0 ? (
         <div className="glass-panel mt-6 rounded-2xl p-10 text-center">
-          <p className="text-sm font-medium">No products match that search.</p>
+          <p className="text-sm font-medium">No bags match that search.</p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Try a different word or choose another category.
+            Try a different word or choose another style.
           </p>
         </div>
       ) : (

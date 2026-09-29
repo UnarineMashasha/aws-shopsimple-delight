@@ -5,16 +5,16 @@ import { ProductCard } from "@/components/ProductCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ShopSimple — everyday essentials, thoughtfully stocked" },
+      { title: "ShopSimple — a small boutique for beautiful bags" },
       {
         name: "description",
         content:
-          "A calm little shop of homeware and desk goods. Browse the catalogue, order in two taps and keep every order in one tidy history.",
+          "A small bag boutique: totes, shoulder bags, backpacks and weekenders. Order in two taps and keep every order in one tidy history.",
       },
-      { property: "og:title", content: "ShopSimple — everyday essentials" },
+      { property: "og:title", content: "ShopSimple — a boutique for beautiful bags" },
       {
         property: "og:description",
-        content: "A calm little shop of homeware and desk goods. Order in two taps.",
+        content: "Totes, shoulder bags, backpacks and weekenders. Order in two taps.",
       },
     ],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 const steps = [
   {
     title: "Browse",
-    copy: "Search or filter the catalogue and find the pieces you want.",
+    copy: "Search or filter the catalogue and find the bag you want.",
     tone: "brand" as const,
   },
   {
@@ -46,14 +46,14 @@ function Index() {
         <div className="glass-panel relative overflow-hidden rounded-3xl">
           <div className="relative z-10 max-w-xl px-6 py-12 sm:px-10 sm:py-16">
             <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 px-3 py-1 text-xs font-medium text-brand">
-              New season · Small store, real care
+              New season · Small boutique, real care
             </span>
             <h1 className="mt-5 max-w-[30ch] text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-              Everyday essentials, thoughtfully stocked.
+              Bags made to be carried every day.
             </h1>
             <p className="mt-4 max-w-[46ch] text-base text-muted-foreground sm:text-lg">
-              A calm little shop of homeware and desk goods. Order in two taps, track it all in one
-              tidy history.
+              A small boutique of totes, shoulder bags, backpacks and weekenders. Order in two
+              taps, track it all in one tidy history.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link

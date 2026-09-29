@@ -78,11 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ShopSimple — everyday essentials, thoughtfully stocked" },
+      { title: "ShopSimple — a small boutique for beautiful bags" },
       {
         name: "description",
         content:
-          "ShopSimple is a small online store for homeware and desk goods. Browse the catalogue, build an order and track it in your history.",
+          "ShopSimple is a small online bag boutique: totes, shoulder bags, backpacks and travel bags. Browse, build an order and track it in your history.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
